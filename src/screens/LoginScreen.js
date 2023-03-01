@@ -66,7 +66,7 @@ export default function LoginScreen() {
 
   const testLogin = (event) => {
     event.preventDefault();
-    dispatch(login('tester1@test.com', '123456'));
+    dispatch(login('email3@email.com', '1234'));
   };
 
   return (
@@ -99,6 +99,7 @@ export default function LoginScreen() {
             autoComplete="email"
             autoFocus
             type="email"
+            defaultValue={"email3@email.com"}
           />
           <TextField
             margin="normal"
@@ -107,6 +108,7 @@ export default function LoginScreen() {
             name="password"
             label="Password"
             id="password"
+            defaultValue={"1234"}
             autoComplete="current-password"
             type={showPassword ? 'text' : 'password'}
             InputProps={{
