@@ -15,6 +15,7 @@ import { toast } from 'react-toastify';
 
 // axios.defaults.baseURL = 'https://easypg-production.up.railway.app/';
 axios.defaults.baseURL = 'https://mushy-coveralls-newt.cyclic.app/';
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 export const login = (email, password) => async (dispatch) => {
   try {
