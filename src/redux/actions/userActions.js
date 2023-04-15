@@ -25,7 +25,7 @@ export const login = (email, password) => async (dispatch) => {
     const config = {
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin: '*'
+        'Access-Control-Allow-Origin: '*',
       },
     };
 
@@ -69,7 +69,7 @@ export const register = (name, phone, email, password) => async (dispatch) => {
     const config = {
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin: '*'
+        'Access-Control-Allow-Origin: '*',
       },
     };
 
