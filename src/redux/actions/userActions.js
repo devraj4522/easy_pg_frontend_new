@@ -15,7 +15,6 @@ import { toast } from 'react-toastify';
 
 // axios.defaults.baseURL = 'https://easypg-production.up.railway.app/';
 axios.defaults.baseURL = 'https://mushy-coveralls-newt.cyclic.app/';
-axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 export const login = (email, password) => async (dispatch) => {
   try {
@@ -26,6 +25,7 @@ export const login = (email, password) => async (dispatch) => {
     const config = {
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin: '*'
       },
     };
 
@@ -69,6 +69,7 @@ export const register = (name, phone, email, password) => async (dispatch) => {
     const config = {
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin: '*'
       },
     };
 
@@ -116,6 +117,7 @@ export const viewProfileRequest = () => async (dispatch, getState) => {
     const config = {
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin: '*'
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
